@@ -1,4 +1,4 @@
-import DOMPurify from "dompurify"
+import DOMPurify from "isomorphic-dompurify"
 
 const sanitize = (dirty: string) => {
   return DOMPurify.sanitize(dirty, {

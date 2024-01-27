@@ -1,26 +1,32 @@
 #+title: Render Editor.js blocks in Qwik
 
-* Warning
-- WIP - only some blocks working for now.
-- This is my first published library, there might be tons of things wrong. *PRs
-  welcomed*, issues with hints too.
+Render your Editor.js blocks in Qwik apps.
+
+This is *Work in Progress* for now, I'm focusing mainly on things I need in my
+projects. *PRs welcomed.*
 
 * Roadmap
-** TODO Better sanitization of output
-*NOT SAFE* for use when you don't control source of blocks. I have to check for
-better ways to sanitize input on both server & client.
-
-** TODO Suport for all blocks
+** TODO Suport for all blocks [4/10]
 - [ ] Code
 - [ ] Delimiter
 - [ ] Embed
-- [ ] Header
-- [ ] Image
-- [ ] List
-- [ ] Paragraph
+- [X] Header
+- [X] Image
+- [X] List
+- [X] Paragraph
 - [ ] Quote
 - [ ] Raw
 - [ ] Table
+
+** TODO Lighter input sanitization
+For now, I'm using [[https://github.com/kkomelin/isomorphic-dompurify][isomorphic-dompurify]], but whole thing seems little too heavy
+for my needs.
+
+Sanitization of input is definitely needed and couple most of libs I found
+either don't work client side, don't work isomorphic or aren't safe at all.
+
+Editor.js is currently depending on non-maintained sanitization library. And it
+might be better/safer idea to run different one anyway.
 
 * Credits
 This library is rewrite of [[https://github.com/moveyourdigital/editorjs-blocks-react-renderer][editorjs-blocks-react-renderer]] for Qwik, kudos to [[https://github.com/moveyourdigital][Move Your Digital]].
