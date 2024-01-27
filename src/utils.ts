@@ -1,11 +1,9 @@
-import sanitizeHtml from 'sanitize-html';
+import DOMPurify from "dompurify"
 
 const sanitize = (dirty: string) => {
-  return sanitizeHtml(dirty, {
-    allowedTags: [ 'b', 'i', 'em', 'strong', 'a' ],
-    allowedAttributes: {
-      'a': [ 'href' ]
-    }
+  return DOMPurify.sanitize(dirty, {
+    ALLOWED_TAGS: ["b", "i", "em", "strong", "a"],
+    ALLOWED_ATTR: ["href"],
   })
 }
 
