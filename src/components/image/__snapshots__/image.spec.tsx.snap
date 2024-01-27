@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Image /> > when receives a Image block with actions > renders a <figure> block with <img> and <figcaption> 1`] = `"<!--qv --><figure class=\\"special-image image-block--stretched image-block--with-border image-block--with-background\\"><img alt=\\"Deep in the <b>universe</b>\\" src=\\"https://cdn.directions.pt/uploads/2020/08/681-2000x1300-2.jpg\\"><figcaption>Deep in the <b>universe</b></figcaption></figure><!--/qv-->"`;
+
+exports[`<Image /> > when receives a Image block without actions > renders a <figure> block with <img> and <figcaption> 1`] = `"<!--qv --><figure><img alt=\\"Deep in the universe\\" src=\\"https://cdn.directions.pt/uploads/2020/08/681-2000x1300-2.jpg\\"><figcaption>Deep in the universe</figcaption></figure><!--/qv-->"`;
+
+exports[`<Image /> > when receives a Image block without name > renders a <figure> block with <img> and <figcaption> 1`] = `"<!--qv --><figure><img alt=\\"Deep in the universe\\" src=\\"https://cdn.directions.pt/uploads/2020/08/681-2000x1300-2.jpg\\"><figcaption>Deep in the universe</figcaption></figure><!--/qv-->"`;
+
+exports[`<Image /> > when receives a SimpleImage block > renders a <figure> block with <img> and <figcaption> 1`] = `"<!--qv --><figure><img alt=\\"Deep in the universe\\" src=\\"https://cdn.directions.pt/uploads/2020/08/681-2000x1300-2.jpg\\"><figcaption>Deep in the universe</figcaption></figure><!--/qv-->"`;

@@ -1,0 +1,26 @@
+#+title: Render Editor.js blocks in Qwik
+
+* Warning
+- WIP - only some blocks working for now.
+- This is my first published library, there might be tons of things wrong. *PRs
+  welcomed*, issues with hints too.
+
+* Roadmap
+** TODO Better sanitization of output
+*NOT SAFE* for use when you don't control source of blocks. I have to check for
+better ways to sanitize input on both server & client.
+
+** TODO Suport for all blocks
+- [ ] Code
+- [ ] Delimiter
+- [ ] Embed
+- [ ] Header
+- [ ] Image
+- [ ] List
+- [ ] Paragraph
+- [ ] Quote
+- [ ] Raw
+- [ ] Table
+
+* Credits
+This library is rewrite of [[https://github.com/moveyourdigital/editorjs-blocks-react-renderer][editorjs-blocks-react-renderer]] for Qwik, kudos to [[https://github.com/moveyourdigital][Move Your Digital]].
