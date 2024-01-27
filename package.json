@@ -1,7 +1,7 @@
 {
   "name": "editorjs-qwik-renderer",
   "license": "MIT",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Render editor.js blocks as Qwik components",
   "main": "./lib/index.qwik.mjs",
   "qwik": "./lib/index.qwik.mjs",
@@ -36,7 +36,6 @@
   },
   "devDependencies": {
     "@builder.io/qwik": "1.4.2",
-    "@types/dompurify": "^3.0.5",
     "@types/eslint": "^8.56.2",
     "@types/node": "^20.11.8",
     "@typescript-eslint/eslint-plugin": "^6.19.1",
@@ -53,7 +52,6 @@
     "vitest": "^1.2.2"
   },
   "dependencies": {
-    "dompurify": "^3.0.8",
-    "isomorphic-dompurify": "^2.3.0"
+    "xss": "^1.0.14"
   }
 }

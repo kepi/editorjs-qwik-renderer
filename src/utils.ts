@@ -1,10 +1,17 @@
-import DOMPurify from "isomorphic-dompurify"
+import xss from "xss"
 
 const sanitize = (dirty: string) => {
-  return DOMPurify.sanitize(dirty, {
-    ALLOWED_TAGS: ["b", "i", "em", "strong", "a"],
-    ALLOWED_ATTR: ["href"],
-  })
+  const options = {
+    whiteList: {
+      a: ["href"],
+      b: [],
+      i: [],
+      em: [],
+      strong: [],
+      cite: [],
+    },
+  }
+  return xss(dirty)
 }
 
 export { sanitize }
