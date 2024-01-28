@@ -11,7 +11,7 @@ const sanitize = (dirty: string) => {
       cite: [],
     },
   }
-  return xss(dirty)
+  return xss(dirty, options)
 }
 
 export { sanitize }
