@@ -1,7 +1,7 @@
 {
   "name": "editorjs-qwik-renderer",
   "license": "MIT",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Render editor.js blocks as Qwik components",
   "main": "./lib/index.qwik.mjs",
   "qwik": "./lib/index.qwik.mjs",
