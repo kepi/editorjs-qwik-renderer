@@ -64,11 +64,11 @@ const Blocks = component$(
       ...renderers,
     }
 
-    const hasBlockId = data.version?.includes("2.21")
+    const hasBlockId = data?.version?.includes("2.21")
 
     return (
       <>
-        {data.blocks.map((block, i) => {
+        {data?.blocks.map((block, i) => {
           if (block.type.toString() in availableRenderers) {
             // @ts-ignore Todo: find a fix
             const Tag = availableRenderers[block.type]
