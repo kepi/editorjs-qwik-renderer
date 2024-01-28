@@ -1,10 +1,10 @@
-import { type Component, component$ } from "@builder.io/qwik";
+import { type Component, component$ } from "@builder.io/qwik"
 // import Code from './components/code/code';
 // import Delimiter from './components/delimiter/delimiter';
 // import Embed from './components/embed/embed';
-import Header from './components/header/header';
-import Image from './components/image/image';
-import List from './components/list/list';
+import Header from "./components/header/header"
+import Image from "./components/image/image"
+import List from "./components/list/list"
 import Paragraph from "./components/paragraph/paragraph"
 // import Quote from './components/quote/quote';
 // import Raw from './components/raw/raw';
@@ -14,8 +14,14 @@ export type ConfigProp = Record<string, RenderConfig>
 
 export type RenderConfig = Record<string, any>
 
-export type RenderFn<T = undefined, K = Record<string, any> | undefined> = Component<{data: T, class?: string}&K>
-export type RenderFnWithoutData<T = undefined, K = Record<string, any> | undefined> = Component<{data: T, class?: string}&K>
+export type RenderFn<
+  T = undefined,
+  K = Record<string, any> | undefined,
+> = Component<{ data: T; class?: string } & K>
+export type RenderFnWithoutData<
+  T = undefined,
+  K = Record<string, any> | undefined,
+> = Component<{ data: T; class?: string } & K>
 export type RenderersProp = Record<string, RenderFn<any>>
 
 export interface Block {

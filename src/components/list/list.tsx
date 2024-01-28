@@ -22,22 +22,27 @@ const Bullet = component$((props) => (
 
 export const Group = component$(
   <C extends string | FunctionComponent = string | FunctionComponent>({
-    as: Tag = 'ul' as C,
+    as: Tag = "ul" as C,
     items,
     ...props
-  }: { as?: C; key?: string; items: NestedListItem[] } & PropsOf<string extends C ? 'ul' : C>) =>
-(
-  <Tag {...props}>
-    {items.map((item: NestedListItem, i: number) => (
-          <Bullet key={i}>
-            <span dangerouslySetInnerHTML={sanitize(typeof item === "string" ? item : item?.content)} />
-            {typeof item !== "string" && item?.items?.length > 0 && (
-              <Tag items={item.items} {...props} />
+  }: { as?: C; key?: string; items: NestedListItem[] } & PropsOf<
+    string extends C ? "ul" : C
+  >) => (
+    <Tag {...props}>
+      {items.map((item: NestedListItem, i: number) => (
+        <Bullet key={i}>
+          <span
+            dangerouslySetInnerHTML={sanitize(
+              typeof item === "string" ? item : item?.content
             )}
-          </Bullet>
-    ))}
-  </Tag>
-)
+          />
+          {typeof item !== "string" && item?.items?.length > 0 && (
+            <Tag items={item.items} {...props} />
+          )}
+        </Bullet>
+      ))}
+    </Tag>
+  )
 )
 
 // FIXME: nefunguje správně, renderuje to as= a items=....

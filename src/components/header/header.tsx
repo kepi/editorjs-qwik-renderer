@@ -1,10 +1,10 @@
-import { component$ } from "@builder.io/qwik";
+import { component$ } from "@builder.io/qwik"
 import { sanitize } from "../../utils"
-import { RenderFn } from "../..";
+import { RenderFn } from "../.."
 
 export interface HeaderBlockData {
-  text?: string;
-  level: number;
+  text?: string
+  level: number
 }
 
 const Header: RenderFn<HeaderBlockData> = component$((props) => {
@@ -14,8 +14,8 @@ const Header: RenderFn<HeaderBlockData> = component$((props) => {
     return <></>
   }
 
-  const Tag = `h${props.data?.level || 1}` as keyof HTMLHeadingElement;
-  return <Tag class={props.class} dangerouslySetInnerHTML={sanitize(text)} />;
+  const Tag = `h${props.data?.level || 1}` as keyof HTMLHeadingElement
+  return <Tag class={props.class} dangerouslySetInnerHTML={sanitize(text)} />
 })
 
-export default Header;
+export default Header

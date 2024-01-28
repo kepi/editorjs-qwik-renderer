@@ -13,8 +13,15 @@
       "types": "./lib-types/index.d.ts"
     }
   },
-  "tags": ["qwik", "editorjs", "editor.js"],
-  "files": ["lib", "lib-types"],
+  "tags": [
+    "qwik",
+    "editorjs",
+    "editor.js"
+  ],
+  "files": [
+    "lib",
+    "lib-types"
+  ],
   "engines": {
     "node": ">=15.0.0"
   },

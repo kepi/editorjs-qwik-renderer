@@ -1,14 +1,14 @@
 import Image, { ImageBlockData } from "./components/image/image"
 const data: ImageBlockData = {
   file: {
-    url: 'https://cdn.directions.pt/uploads/2020/08/681-2000x1300-2.jpg',
-    name: '681-2000x1300-2',
+    url: "https://cdn.directions.pt/uploads/2020/08/681-2000x1300-2.jpg",
+    name: "681-2000x1300-2",
   },
-  caption: 'Deep in the <b>universe</b>',
+  caption: "Deep in the <b>universe</b>",
   withBorder: true,
   stretched: true,
   withBackground: true,
-};
+}
 
 export default () => {
   return (
