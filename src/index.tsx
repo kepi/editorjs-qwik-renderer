@@ -22,7 +22,10 @@ export type RenderFnWithoutData<
   T = undefined,
   K = Record<string, any> | undefined,
 > = Component<{ data: T; class?: string } & K>
-export type RenderersProp = Record<string, RenderFn<any>>
+
+export type RenderersProp = {
+  [key: string]: RenderFn<any>
+}
 
 export interface Block {
   id?: string
@@ -50,7 +53,7 @@ const Blocks = component$(
       return <></>
     }
 
-    const defaultRenderers = {
+    const defaultRenderers: RenderersProp = {
       // code: Code,
       // delimiter: Delimiter,
       // embed: Embed,
@@ -74,7 +77,6 @@ const Blocks = component$(
       <>
         {data.blocks.map((block, i) => {
           if (block.type.toString() in availableRenderers) {
-            // @ts-ignore Todo: find a fix
             const Tag = availableRenderers[block.type]
             return (
               <Tag
