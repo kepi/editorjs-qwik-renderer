@@ -78,10 +78,11 @@ const Blocks = component$(
         {data.blocks.map((block, i) => {
           if (block.type.toString() in availableRenderers) {
             const Tag = availableRenderers[block.type]
+            const blockData = block.data
             return (
               <Tag
                 key={hasBlockId && block.id ? block.id : i}
-                data={block.data}
+                data={blockData}
                 {...config[block.type]}
               />
             )
