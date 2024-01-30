@@ -36,7 +36,7 @@
     "fmt": "prettier --write .",
     "fmt.check": "prettier --check .",
     "lint": "eslint \"src/**/*.ts*\"",
-    "release": "np",
+    "release": "pnpm install && pnpm fmt && pnpm lint && pnpm run build.lib && pnpm publish --access public",
     "start": "vite --open --mode ssr",
     "test": "vitest src",
     "qwik": "qwik"
@@ -50,7 +50,6 @@
     "@vitest/ui": "^1.2.2",
     "eslint": "^8.55.0",
     "eslint-plugin-qwik": "^1.4.2",
-    "np": "^9.2.0",
     "prettier": "^3.2.4",
     "typescript": "^5.3.2",
     "undici": "^6.5.0",
